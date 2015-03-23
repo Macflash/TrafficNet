@@ -1,10 +1,9 @@
 var roadwaydiv;
-var rw = roadway(3,10);
-
 
 function init(){
   roadwaydiv = document.getElementById('roadway');
- createroadwaydiv(roadwaydiv,rw);
+  var rw = roadway(3,10);
+  createroadwaydiv(roadwaydiv,rw);
 } 
 
 function createroadwaydiv(rdiv,rway){
