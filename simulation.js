@@ -20,7 +20,7 @@ function update(){
 }
 
 function drawCars(cars,rw){
-  for(i=0;<cars.length;i++){
+  for(i=0;i<cars.length;i++){
     cars[i].draw(rw);
   }
 }
