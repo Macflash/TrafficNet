@@ -19,8 +19,8 @@ function update(road,cars,roaddiv){
 function drawCars(cars,rw){
   for(k=0;k<cars.length;k++){
     cars[k].draw(rw);
-    console.log(k);
-    console.log(cars[k]);
+    //console.log(k);
+    //console.log(cars[k]);
   }
 }
 
