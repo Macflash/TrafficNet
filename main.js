@@ -12,6 +12,7 @@ function createroadwaydiv(rdiv,rway){
   for(row = 0; row < rway.length; row++){
       //add a row div
       var newdiv = document.createElement("div");
+      newdiv.innerHTML = "-";
       newdiv.setAttribute('class', 'rowmarker');
       for(lane = 0; lane < rway.numLanes; lane++){
       //add some lane-marker divs
