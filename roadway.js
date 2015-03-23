@@ -21,15 +21,7 @@ function dumbcar(lane,location,length){
   this.speed = 2;
   this.maxspeed = 2;
   
-  this.draw = function(roadway){
-    for(i = 0; i < length; i++){
-      var s = this.location + i;
-      if(s > roadway.length){
-        s = s - roadway.length;
-      }
-      roadway.lanes[this.lane][s] = "dumb";
-    }
-  }
+  this.type = "dumb";
   
   this.decide = function(roadway){
     //check how far ahead the next car is
@@ -44,15 +36,7 @@ function fastcar(lane,location,length){
   this.speed = 2;
   this.maxspeed = 5;
   
-  this.draw = function(roadway){
-    for(i = 0; i < length; i++){
-      var s = this.location + i;
-      if(s > roadway.length){
-        s = s - roadway.length;
-      }
-      roadway.lanes[this.lane][s] = "fast";
-    }
-  }
+  this.type = "fast";
   
   this.decide = function(roadway){
     //check how far ahead the next car is
