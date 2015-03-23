@@ -37,7 +37,7 @@ function moveCars(cars,rw){
     if(cars[i].location < 0){
       cars[i].location = cars[i].location + rw.length;
     }
-    if(cars[i].location >= rw.length){
+    else if(cars[i].location >= rw.length){
       cars[i].location = cars[i].location - rw.length;
     }
   }
