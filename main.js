@@ -4,7 +4,7 @@ var gamecars;
 
 function init(){
   roadwaydiv = document.getElementById('roadway');
-  gamerw = new roadway(4,150);
+  gamerw = new roadway(4,200);
   gamecars = new Array();
   
   
