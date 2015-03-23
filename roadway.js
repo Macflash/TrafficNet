@@ -21,7 +21,7 @@ function dumbcar(lane,location,length){
   this.speed = 2;
   this.maxspeed = 2;
   
-  this.type = "dumb";
+  this.cartype = "dumb";
   
   this.decide = function(roadway){
     //check how far ahead the next car is
@@ -36,7 +36,7 @@ function fastcar(lane,location,length){
   this.speed = 2;
   this.maxspeed = 5;
   
-  this.type = "fast";
+  this.cartype = "fast";
   
   this.decide = function(roadway){
     //check how far ahead the next car is
