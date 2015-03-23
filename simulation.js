@@ -26,7 +26,7 @@ function drawCars(cars,rw){
 }
 
 function moveCars(cars,rw){
-  for(i=0;<cars.length;i++){
+  for(i=0;i<cars.length;i++){
     cars[i].location = cars[i].location + cars[i].speed;
     if(cars[i].location >= rw.length){
       cars[i].location = cars[i].location - rw.length;
