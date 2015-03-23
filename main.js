@@ -7,7 +7,7 @@ function init(){
   createroadwaydiv(roadwaydiv,gamerw);
   console.log(gamerw.lanes[1][1]);
   update(gamerw,gamecars,roadwaydiv);
-  setInterval("update(gamerw,gamecars,roadwaydiv)", tstep);
+  setInterval("update(gamerw,gamecars,roadwaydiv)", 100);
 }
 
 function createroadwaydiv(rdiv,rway){
