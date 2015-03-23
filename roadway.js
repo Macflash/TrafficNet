@@ -57,6 +57,7 @@ function fastcar(lane,location,length){
   this.decide = function(roadway){
     //check how far ahead the next car is
     var gap = getGap(roadway, this.lane, this.location);
+    console.log(gap);
     if(gap > this.speed * 10){
       if(this.speed < this.maxspeed){
         this.speed++;
