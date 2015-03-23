@@ -26,7 +26,7 @@ function dumbcar(lane,location,length){
       if(s > roadway.length){
         s = s - roadway.length;
       }
-      //roadway.lanes[lane][s] = speed;
+      roadway.lanes[lane][s] = speed;
     }
   }
   
