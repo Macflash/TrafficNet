@@ -21,8 +21,9 @@ function dumbcar(lane,location,length){
   this.speed = 1;
   
   this.draw = function(roadway){
+    console.log('loc:' + this.location);
     for(i = 0; i < length; i++){
-      var s = location + i;
+      var s = this.location + i;
       if(s > roadway.length){
         s = s - roadway.length;
       }
