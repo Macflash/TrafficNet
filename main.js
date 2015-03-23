@@ -38,8 +38,8 @@ function createroadwaydiv(rdiv,rway){
 }
 
 function getTile(row,lane){
-  var row = roadwaydiv.getElementByName(row);
-  var tile = row.getElementByName(lane);
+  var row = roadwaydiv.getElementsByName(row)[0].value;
+  var tile = row.getElementsByName(lane)[0].value;
   return tile;
 }
 
