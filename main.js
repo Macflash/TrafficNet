@@ -10,9 +10,15 @@ function init(){
   
   gamecars.push(new dumbcar(1,0,15));
   gamecars.push(new dumbcar(1,60,20));
+  gamecars.push(new dumbcar(1,90,15));
+  gamecars.push(new dumbcar(1,160,20));
+  gamecars.push(new dumbcar(1,270,15));
+  
   gamecars.push(new fastcar(1,250,15));
   
   gamecars.push(new dumbcar(0,50,15));
+  gamecars.push(new dumbcar(0,180,15));
+  
   gamecars.push(new fastcar(0,150,15));
   
   gamecars.push(new dumbcar(2,200,40));
