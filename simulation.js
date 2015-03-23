@@ -19,14 +19,14 @@ function update(road,cars,roaddiv){
 
 function drawCars(cars,rw){
   for(k=0;k<cars.length;k++){
-    var type = cars[k].type;
+    var t = cars[k].cartype;
     
     for(i = 0; i < length; i++){
       var s = this.location + i;
       if(s >= roadway.length){
         s = s - roadway.length;
       }
-      roadway.lanes[this.lane][s] = type;
+      roadway.lanes[this.lane][s] = t;
     }
   }
 }
