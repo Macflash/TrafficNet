@@ -1,1 +1,15 @@
+.rowmarker {
+  background-color:grey;
+  height:12px;
+  margin-top:2px;
+  clear:both;
+}
 
+.tilemarker {
+  background-color:green;
+  width:30px;
+  height:10px;
+  margin-top:1px;
+  margin-left:5px;
+  float:left;
+}
