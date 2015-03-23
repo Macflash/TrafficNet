@@ -15,6 +15,10 @@ function update(road,cars,roaddiv){
   
   //display roadway
   displayroadway(roaddiv, road);
+  
+  //compute statistics
+  computeStats(cars);
+  
 }
 
 function drawCars(cars,rw){
@@ -28,6 +32,17 @@ function drawCars(cars,rw){
       }
       rw.lanes[cars[k].lane][s] = t;
     }
+  }
+}
+
+function drawCar(car,rw){
+  var t = car.cartype;
+  for(i = 0; i < car.length; i++){
+    var s = car.location + i;
+    if(s >= rw.length){
+      s = s - rw.length;
+    }
+    rw.lanes[car.lane][s] = t;
   }
 }
 
