@@ -5,7 +5,7 @@ function init(){
   roadwaydiv = document.getElementById('roadway');
   var gamerw = new roadway(4,300);
   createroadwaydiv(roadwaydiv,gamerw);
-  console.log(roadway.lanes[1][1]);
+  console.log(gamerw.lanes[1][1]);
   update();
   setInterval(update, tstep);
 }
