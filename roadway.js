@@ -43,7 +43,7 @@ function fastcar(lane,location,length){
   this.location = location;
   this.length = length;
   this.speed = 2;
-  this.maxspeed = Math.round(Math.random() * 2) + 5; //5 - 7
+  this.maxspeed = Math.round(Math.random() * 6) + 1; //5 - 7
   
   this.cartype = "fast";
   
