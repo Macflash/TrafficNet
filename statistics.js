@@ -23,5 +23,5 @@ function computeStats(cars){
     }
   }
   console.log("fast: " + fast.avg);
-  console.log("slow: " + slow.avg);
+  console.log("dumb: " + dumb.avg);
 }
