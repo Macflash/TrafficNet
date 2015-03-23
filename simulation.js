@@ -1,6 +1,3 @@
-var gamecars = new Array();
-gamecars.push(new dumbcar(0,0,10));
-
 function update(road,cars,roaddiv){
   //clear roadway
   road.reset();
