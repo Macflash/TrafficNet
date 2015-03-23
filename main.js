@@ -1,11 +1,10 @@
 var roadwaydiv;
 var rw = roadway(3,10);
-var dcar = dumbcar(1,50,10);
+
 
 function init(){
   roadwaydiv = document.getElementById('roadway');
-  dcar.draw(rw);
-  createroadwaydiv(roadwaydiv,rw);
+ createroadwaydiv(roadwaydiv,rw);
 } 
 
 function createroadwaydiv(rdiv,rway){
