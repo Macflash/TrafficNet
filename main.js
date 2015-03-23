@@ -6,12 +6,19 @@ function init(){
   roadwaydiv = document.getElementById('roadway');
   gamerw = new roadway(4,300);
   gamecars = new Array();
+  
+  
   gamecars.push(new dumbcar(1,20,15));
-  gamecars.push(new dumbcar(0,50,15));
-  gamecars.push(new dumbcar(3,100,15));
   gamecars.push(new dumbcar(1,60,20));
-  gamecars.push(new dumbcar(2,200,40));
   gamecars.push(new fastcar(1,250,15));
+  
+  gamecars.push(new dumbcar(0,50,15));
+  gamecars.push(new fastcar(0,150,15));
+  
+  gamecars.push(new dumbcar(2,200,40));
+  gamecars.push(new fastcar(2,100,15));
+  
+  gamecars.push(new dumbcar(3,100,15));
   gamecars.push(new fastcar(3,5,15));
   
   console.log(gamecars);
