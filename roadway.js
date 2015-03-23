@@ -56,7 +56,7 @@ function fastcar(lane,location,length){
       }
     }
     else{
-      if(gap < this.speed * 6){
+      if((gap < this.speed) * 5 && (this.speed < this.maxspeed)){
         //check other lanes to see if no collision!
         var lgap = getGap(roadway,this.lane - 1, this.location + this.length);
         var rgap = getGap(roadway,this.lane + 1, this.location + this.length);
