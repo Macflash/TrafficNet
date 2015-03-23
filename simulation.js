@@ -21,12 +21,12 @@ function drawCars(cars,rw){
   for(k=0;k<cars.length;k++){
     var t = cars[k].cartype;
     
-    for(i = 0; i < length; i++){
-      var s = this.location + i;
-      if(s >= roadway.length){
-        s = s - roadway.length;
+    for(i = 0; i < cars[k].length; i++){
+      var s = cars[k].location + i;
+      if(s >= rw.length){
+        s = s - rw.length;
       }
-      roadway.lanes[this.lane][s] = t;
+      rw.lanes[cars[k].lane][s] = t;
     }
   }
 }
