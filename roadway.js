@@ -18,7 +18,7 @@ function dumbcar(lane,location,length){
   this.lane = lane;
   this.location = location;
   this.length = length;
-  this.speed = 1;
+  this.speed = 2;
   
   this.draw = function(roadway){
     for(i = 0; i < length; i++){
