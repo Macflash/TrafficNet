@@ -1,10 +1,15 @@
 var roadwaydiv;
 var gamerw;
-
+var gamecars;
 function init(){
   roadwaydiv = document.getElementById('roadway');
-  var gamerw = new roadway(4,300);
+  gamerw = new roadway(4,300);
+  gamecars = new Array();
+  gamecars.push(new dumbcar(0,0,10));
+  
   createroadwaydiv(roadwaydiv,gamerw);
+  console.log(gamerw);
+  console.log(gamerw.lanes[1]);
   console.log(gamerw.lanes[1][1]);
   update(gamerw,gamecars,roadwaydiv);
   setInterval("update(gamerw,gamecars,roadwaydiv)", 100);
