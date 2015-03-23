@@ -95,6 +95,7 @@ function getGap(road,lane,location){
   var r = location - 1;
   var l = road.lanes[lane];
   var gap = 0;
+  console.log(l);
   while(typeof l[r] == 'undefined'){
     r--;
     gap++;
