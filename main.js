@@ -1,6 +1,7 @@
 var roadwaydiv;
 var gamerw;
 var gamecars;
+
 function init(){
   roadwaydiv = document.getElementById('roadway');
   gamerw = new roadway(4,300);
@@ -39,6 +40,7 @@ function createroadwaydiv(rdiv,rway){
 function getTile(row,lane){
   var row = roadwaydiv.getElementByName(row);
   var tile = row.getElementByName(lane);
+  return tile;
 }
 
 function displayroadway(rdiv,rway){
