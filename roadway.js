@@ -19,12 +19,21 @@ function dumbcar(lane,location,length){
   this.location = location;
   this.length = length;
   this.speed = 2;
-  this.maxspeed = 2;
+  this.maxspeed = Math.round(Math.random() * 3 + 1);
   
   this.cartype = "dumb";
   
   this.decide = function(roadway){
     //check how far ahead the next car is
+    var gap = getGap(roadway, this.lane, this.location);
+    if(gap > this.speed * 10){
+      if(this.speed < this.maxspeed){
+        this.speed++;
+      }
+    }
+    if(gap < this.speed * 3 && this.speed > 0){
+        this.speed--;
+      }
   }
   
 }
