@@ -49,6 +49,7 @@ function drawCar(car,rw){
 function decideCars(cars,rw){
   for(k=0;k<cars.length;k++){
     cars[k].decide(rw);
+    drawCar(cars[k], rw);
   }
 }
 
