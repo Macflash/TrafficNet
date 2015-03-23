@@ -22,6 +22,6 @@ function computeStats(cars){
       dumb.add(cars[i]);
     }
   }
-  console.log("fast: " + fast.avg);
-  console.log("dumb: " + dumb.avg);
+  console.log("fast: " + fast.avg());
+  console.log("dumb: " + dumb.avg());
 }
