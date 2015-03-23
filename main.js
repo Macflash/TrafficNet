@@ -6,19 +6,8 @@ function init(){
   console.log(rw);
   console.log(rw.length);
   createroadwaydiv(roadwaydiv,rw);
-} 
-
-function update(){
-  //clear roadway
-  
-  //draw cars
-  
-  //car decisions
-  
-  //car movement
-  
-  //check for collisions?
-  
+  update();
+	setInterval(update, tstep);
 }
 
 function createroadwaydiv(rdiv,rway){
