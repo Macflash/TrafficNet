@@ -19,7 +19,7 @@ function dumbcar(lane,location,length){
   this.location = location;
   this.length = length;
   this.speed = 2;
-  this.maxspeed = Math.round(Math.random() * 3 + 1);
+  this.maxspeed = Math.round(Math.random() * 3) + 1; // 1 - 4
   
   this.cartype = "dumb";
   
@@ -43,7 +43,7 @@ function fastcar(lane,location,length){
   this.location = location;
   this.length = length;
   this.speed = 2;
-  this.maxspeed = 5;
+  this.maxspeed = Math.round(Math.random() * 2) + 4; //4 - 6
   
   this.cartype = "fast";
   
@@ -60,8 +60,6 @@ function fastcar(lane,location,length){
         //check other lanes to see if no collision!
         var lgap = getGap(roadway,this.lane - 1, this.location + this.length);
         var rgap = getGap(roadway,this.lane + 1, this.location + this.length);
-        console.log(lgap);
-        console.log(rgap);
         if (lgap >= rgap){
           if(lgap > this.length){
             //change lanes!
