@@ -62,6 +62,9 @@ function displayroadway(rdiv,rway){
       var tile = getTile(r,l);
       if(typeof rway.lanes[l][r] != 'undefined'){
         tile.style.background = "blue";
+        if(rway.lanes[l][r] == "blocked"){
+          tile.style.background = "black";
+        }
         if(rway.lanes[l][r] == "fast"){
           tile.style.background = "red";
         }
