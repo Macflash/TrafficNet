@@ -19,7 +19,7 @@ function update(road,cars,roaddiv){
 function drawCars(cars,rw){
   for(i=0;i<cars.length;i++){
     cars[i].draw(rw);
-    console.log(cars[i].location);
+    console.log(i + cars[i]);
   }
 }
 
