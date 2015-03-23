@@ -8,6 +8,19 @@ function init(){
   createroadwaydiv(roadwaydiv,rw);
 } 
 
+function update(){
+  //clear roadway
+  
+  //draw cars
+  
+  //car decisions
+  
+  //car movement
+  
+  //check for collisions?
+  
+}
+
 function createroadwaydiv(rdiv,rway){
   for(row = 0; row < rway.length; row++){
       //add a row div
