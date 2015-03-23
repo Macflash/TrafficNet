@@ -30,7 +30,7 @@ function drawCars(cars,rw){
       if(s >= rw.length){
         s = s - rw.length;
       }
-      rw.lanes[cars[k].lane][s] = t;
+      rw.lanes[cars[k].lane][s] = "blocked";
     }
   }
 }
