@@ -3,7 +3,7 @@ function typestat(cartype){
   this.spdsum = 0;
   this.num = 0;
   this.avg = function(){
-    return spdsum/num;
+    return this.spdsum/this.num;
   }
   this.add = function(car){
     this.spdsum = this.spdsum + car.speed;
