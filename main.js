@@ -1,13 +1,14 @@
 var roadwaydiv;
+var gamerw;
 
 function init(){
   roadwaydiv = document.getElementById('roadway');
-  var rw = new roadway(4,300);
+  var gamerw = new roadway(4,300);
   console.log(rw);
   console.log(rw.length);
-  createroadwaydiv(roadwaydiv,rw);
+  createroadwaydiv(roadwaydiv,gamerw);
   update();
-	setInterval(update, tstep);
+  setInterval(update, tstep);
 }
 
 function createroadwaydiv(rdiv,rway){
