@@ -6,6 +6,7 @@ function update(road,cars,roaddiv){
   drawCars(cars, road);
   
   //car decisions
+  decideCars(cars, road);
   
   //car movement
   moveCars(cars, road);
@@ -21,6 +22,12 @@ function drawCars(cars,rw){
     cars[k].draw(rw);
     //console.log(k);
     //console.log(cars[k]);
+  }
+}
+
+function decideCars(cars,rw){
+  for(k=0;k<cars.length;k++){
+    cars[k].decide(rw);
   }
 }
 
