@@ -46,10 +46,10 @@ function displayroadway(rdiv,rway){
     for(l = 0; l < rway.numLanes; l++){
       var tile = getTile(r,l);
       if(typeof rway.lanes[l][r] != 'undefined'){
-        tile.style.backgroundcolor = "blue";
+        tile.style.background = "blue";
       }
       else{
-        tile.style.backgroundcolor = "grey";
+        tile.style.background = "grey";
       }
     }
   }
