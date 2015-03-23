@@ -72,7 +72,14 @@ function fastcar(lane,location,length){
 
 function getGap(road,lane,location){
   var r = location - 1;
-  var arr = road.lanes[lane];
+  var l = road.lanes[lane];
   var gap = 0;
+  while(typeof l[r] != 'undefined'){
+    r--;
+    gap++;
+    if(r < 0){
+      r += road.length;
+    }
+  }
   return gap;
 }
