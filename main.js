@@ -37,7 +37,7 @@ function createroadwaydiv(rdiv,rway){
 }
 
 function getTile(row,lane){
-  var tile = row.getElementById('r' + row + 'l' + lane);
+  var tile = document.getElementById('r' + row + 'l' + lane);
   return tile;
 }
 
