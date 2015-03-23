@@ -11,9 +11,12 @@ function update(){
   //car decisions
   
   //car movement
+  moveCars(gamecars, gamerw);
   
   //check for collisions?
   
+  //display roadway
+  displayroadway(roadwaydiv, gamerw);
 }
 
 function drawCars(cars,rw){
@@ -21,3 +24,13 @@ function drawCars(cars,rw){
     cars[i].draw(rw);
   }
 }
+
+function moveCars(cars,rw){
+  for(i=0;<cars.length;i++){
+    cars[i].location = cars[i].location + cars[i].speed;
+    if(cars[i].location >= rw.length){
+      cars[i].location = cars[i].location - rw.length;
+    }
+  }
+}
+
