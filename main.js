@@ -17,7 +17,7 @@ function init(){
   //console.log(getTile(1,1));
   
   update(gamerw,gamecars,roadwaydiv);
-  setInterval("update(gamerw,gamecars,roadwaydiv)", 100);
+  setInterval("update(gamerw,gamecars,roadwaydiv)", 50);
 }
 
 function createroadwaydiv(rdiv,rway){
