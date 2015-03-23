@@ -64,7 +64,24 @@ function fastcar(lane,location,length){
       }
     }
     else{
-      if(gap < this.speed * 2){
+      if(gap < this.speed * 5 && this.speed < this.maxspeed){
+        //check other lanes to see if no collision!
+        var lgap = getGap(roadway,this.lane - 1, this.location + this.length);
+        var rgap = getGap(roadway,this.lane + 1, this.location + this.length);
+        if (lgap >= rgap){
+          if(lgap > this.length){
+            //change lanes!
+            this.lane--;
+          }
+        }
+        else {
+          if(rgap > this.length){
+            //change lanes!
+            this.lane++;
+          }
+        }
+      }
+      if(gap < this.speed * 2 && this.speed > 0){
         this.speed--;
       }
     }
@@ -72,6 +89,8 @@ function fastcar(lane,location,length){
 }
 
 function getGap(road,lane,location){
+  if(lane < 0){ return 0; }
+  if(lane > roadway.numLanes - 1){ return 0; }
   var r = location - 1;
   var l = road.lanes[lane];
   var gap = 0;
