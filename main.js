@@ -6,7 +6,11 @@ function init(){
   roadwaydiv = document.getElementById('roadway');
   gamerw = new roadway(4,300);
   gamecars = new Array();
-  gamecars.push(new dumbcar(1,20,10));
+  gamecars.push(new dumbcar(1,20,15));
+  gamecars.push(new dumbcar(0,50,15));
+  gamecars.push(new dumbcar(3,100,15));
+  gamecars.push(new dumbcar(1,60,20));
+  gamecars.push(new dumbcar(4,200,40));
   
   createroadwaydiv(roadwaydiv,gamerw);
   
