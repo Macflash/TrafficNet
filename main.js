@@ -25,12 +25,11 @@ function createroadwaydiv(rdiv,rway){
       //add a row div
       var newdiv = document.createElement("div");
       newdiv.setAttribute('class', 'rowmarker');
-      newdiv.setAttribute('name', row);
       for(lane = 0; lane < rway.numLanes; lane++){
       //add some lane-marker divs
         var newtile = document.createElement("div");
         newtile.setAttribute('class', 'tilemarker');
-        newtile.setAttribute('name', lane);
+        newtile.setAttribute('id', 'r' + row + 'l' + lane);
         newdiv.appendChild(newtile);
       }
       rdiv.appendChild(newdiv);
@@ -38,8 +37,7 @@ function createroadwaydiv(rdiv,rway){
 }
 
 function getTile(row,lane){
-  var row = roadwaydiv.getElementsByName(row)[0].value;
-  var tile = row.getElementsByName(lane)[0].value;
+  var tile = row.getElementById('r' + row + 'l' + lane);
   return tile;
 }
 
