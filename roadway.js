@@ -27,7 +27,7 @@ function dumbcar(lane,location,length){
       if(s > roadway.length){
         s = s - roadway.length;
       }
-      roadway.lanes[lane][s] = "dumb";
+      roadway.lanes[this.lane][s] = "dumb";
     }
   }
   
@@ -50,7 +50,7 @@ function fastcar(lane,location,length){
       if(s > roadway.length){
         s = s - roadway.length;
       }
-      roadway.lanes[lane][s] = "fast";
+      roadway.lanes[this.lane][s] = "fast";
     }
   }
   
