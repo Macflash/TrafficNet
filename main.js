@@ -12,6 +12,7 @@ function init(){
   gamecars.push(new dumbcar(1,60,20));
   gamecars.push(new dumbcar(2,200,40));
   gamecars.push(new fastcar(1,250,15));
+  gamecars.push(new fastcar(3,250,15));
   
   console.log(gamecars);
   
