@@ -1,22 +1,22 @@
 var gamecars = new Array();
 gamecars.push(new dumbcar(0,0,10));
 
-function update(){
+function update(road,cars,roaddiv){
   //clear roadway
-  gamerw.reset();
+  road.reset();
   
   //draw cars
-  drawCars(gamecars, gamerw);
+  drawCars(cars, road);
   
   //car decisions
   
   //car movement
-  moveCars(gamecars, gamerw);
+  moveCars(cars, road);
   
   //check for collisions?
   
   //display roadway
-  displayroadway(roadwaydiv, gamerw);
+  displayroadway(roaddiv, road);
 }
 
 function drawCars(cars,rw){
