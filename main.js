@@ -14,7 +14,7 @@ function init(){
   //console.log(gamerw.lanes[1]);
   //console.log(gamerw.lanes[1][1]);
   
-  console.log(getTile(1,1));
+  //console.log(getTile(1,1));
   
   update(gamerw,gamecars,roadwaydiv);
   setInterval("update(gamerw,gamecars,roadwaydiv)", 100);
@@ -42,5 +42,15 @@ function getTile(row,lane){
 }
 
 function displayroadway(rdiv,rway){
-  
+  for(r = 0; r < rway.length; r++){
+    for(l = 0; l < rway.numLanes; l++){
+      var tile = getTile(r,l);
+      if(typeof rway.lanes[l][r] != 'undefined'){
+        tile.style.backgroundcolor = "blue";
+      }
+      else{
+        tile.style.backgroundcolor = "grey";
+      }
+    }
+  }
 }
