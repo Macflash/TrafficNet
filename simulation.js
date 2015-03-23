@@ -34,7 +34,7 @@ function decideCars(cars,rw){
 function moveCars(cars,rw){
   for(i=0;i<cars.length;i++){
     cars[i].location = cars[i].location - cars[i].speed;
-    if(cars[i].location <= rw.length){
+    if(cars[i].location < 0){
       cars[i].location = cars[i].location + rw.length;
     }
     if(cars[i].location >= rw.length){
