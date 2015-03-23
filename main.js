@@ -8,8 +8,8 @@ function init(){
   gamecars = new Array();
   
   
-  gamecars.push(new dumbcar(1,20,15));
-  gamecars.push(new fastcar(1,60,20));
+  gamecars.push(new dumbcar(1,0,15));
+  gamecars.push(new dumbcar(1,60,20));
   gamecars.push(new fastcar(1,250,15));
   
   gamecars.push(new dumbcar(0,50,15));
