@@ -17,10 +17,10 @@ function update(road,cars,roaddiv){
 }
 
 function drawCars(cars,rw){
-  for(i=0;i<cars.length;i++){
-    cars[i].draw(rw);
-    console.log(i);
-    console.log(cars[i]);
+  for(k=0;k<cars.length;k++){
+    cars[k].draw(rw);
+    console.log(k);
+    console.log(cars[k]);
   }
 }
 
