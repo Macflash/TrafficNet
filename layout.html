@@ -1,13 +1,26 @@
 <head>
+
   <link rel="stylesheet" type="text/css" href="layout.css" />
+
   <script type="text/javascript" src="statistics.js"></script>
+
   <script type="text/javascript" src="controls.js"></script>
+
   <script type="text/javascript" src="roadway.js"></script>
+
   <script type="text/javascript" src="simulation.js"></script>
+
   <script type="text/javascript" src="main.js"></script>
+
 </head>
 
+
 <body onload="init()">
-  <div id="roadway">Roadway</div>
-  <div id="controls">Controls</div>
+<div id="overlay" class="rway"></div>
+<div id="roadway" class="rway"></div>
+
+  <div id="controls">
+	<input type="range" name="Lanes" />
+  </div>
+
 </body>

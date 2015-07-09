@@ -3,11 +3,34 @@
   clear:both;
 }
 
-.tilemarker {
+.tilemarker, .hovermarker {
   background-color:green;
   width:30px;
   height:2px;
   margin-top:0px;
   margin-left:5px;
   float:left;
+}
+
+.hovermarker {
+  background-color: transparent;
+  opacity: .5;
+}
+
+.hovermarker:hover {
+  background-color: green;
+}
+
+.rway {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+#overlay {
+  z-index: 5;
+}
+
+#roadway {
+  z-index: 2;
 }
