@@ -1,9 +1,11 @@
 var roadwaydiv;
+var overlaydiv;
 var gamerw;
 var gamecars;
 
 function init(){
   roadwaydiv = document.getElementById('roadway');
+  overlaydiv = document.getElementById('overlay');
   gamerw = new roadway(4,300);
   gamecars = new Array();
   
@@ -29,32 +31,40 @@ function init(){
   
   console.log(gamecars);
   
-  createroadwaydiv(roadwaydiv,gamerw);
-  
-  //console.log(gamerw);
-  //console.log(gamerw.lanes[1]);
-  //console.log(gamerw.lanes[1][1]);
-  
-  //console.log(getTile(1,1));
+  createroadwaydiv(overlaydiv, roadwaydiv,gamerw);
   
   update(gamerw,gamecars,roadwaydiv);
   setInterval("update(gamerw,gamecars,roadwaydiv)", 50);
 }
 
-function createroadwaydiv(rdiv,rway){
+function createroadwaydiv(odiv, rdiv,rway){
   for(row = 0; row < rway.length; row++){
       //add a row div
-      var newdiv = document.createElement("div");
-      newdiv.setAttribute('class', 'rowmarker');
+      var newrdiv = document.createElement("div");
+      newrdiv.setAttribute('class', 'rowmarker');
+	  
+	  var newodiv = document.createElement("div");
+      newodiv.setAttribute('class', 'rowmarker');
+	  
       for(lane = 0; lane < rway.numLanes; lane++){
       //add some lane-marker divs
         var newtile = document.createElement("div");
         newtile.setAttribute('class', 'tilemarker');
         newtile.setAttribute('id', 'r' + row + 'l' + lane);
-        newdiv.appendChild(newtile);
+        newrdiv.appendChild(newtile);
+		
+		newtile = document.createElement("div");
+        newtile.setAttribute('class', 'hovermarker');
+        newtile.onclick = new Function("overlayClicked(" + row + "," + lane +")");
+		newodiv.appendChild(newtile);
       }
-      rdiv.appendChild(newdiv);
+      rdiv.appendChild(newrdiv);
+	  odiv.appendChild(newodiv);
   }
+}
+
+function overlayClicked(row,lane){
+	gamecars.push(new fastcar(lane,row,15));
 }
 
 function getTile(row,lane){
