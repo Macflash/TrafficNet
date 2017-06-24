@@ -1,36 +1,36 @@
 .rowmarker {
-  background-color:grey;
-  clear:both;
+    background-color: grey;
+    clear: both;
 }
 
 .tilemarker, .hovermarker {
-  background-color:green;
-  width:30px;
-  height:2px;
-  margin-top:0px;
-  margin-left:5px;
-  float:left;
+    background-color: green;
+    width: 30px;
+    height: 2px;
+    margin-top: 0px;
+    margin-left: 5px;
+    float: left;
 }
 
 .hovermarker {
-  background-color: transparent;
-  opacity: .5;
+    background-color: transparent;
+    opacity: .5;
 }
 
 .hovermarker:hover {
-  background-color: green;
+    background-color: green;
 }
 
 .rway {
-  position: fixed;
-  top: 20px;
-  left: 20px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
 }
 
 #overlay {
-  z-index: 5;
+    z-index: 5;
 }
 
 #roadway {
-  z-index: 2;
+    z-index: 2;
 }
